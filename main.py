@@ -8,10 +8,10 @@ import time
 from time import gmtime, strftime
 
 # defining CONSTS
-CLIENT_ID = "8006f70b895946babacd024c98e0391b"
-CLIENT_SECRET = "f968fb4bda254d3db0440221208aea89"
+CLIENT_ID = "client_id"
+CLIENT_SECRET = "client_key"
 TOKEN_INFO = "token_info"
-SECRET_KEY = "mfsa"
+SECRET_KEY = "secret_key"
 
 SHORT_TERM = "short_term"
 MEDIUM_TERM = "medium_term"
