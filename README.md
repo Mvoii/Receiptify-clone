@@ -4,3 +4,5 @@
 A python and flask app
 
 <p2>tutorials by Eric Toor at YouTube</p2>
+
+**not complete
