@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style1.css') }}">
+    <title>receipt</title>
+</head>
+<body>
+    {% from "receiptContainer.html" import receiptContainer with context %}
+    <div>
+        <center>
+            <h1>Receiptify</h1>
+            <h2>Top Track Generator</h2>    
+        </center>
+    </div>
+
+    <div style="width: 100%; height: auto" class="buttons">
+        <center>
+            <div>
+                <button onclick="showContent('short_term_receipt')" class="generatePicButton">Short Term Receipt</button>
+                <button onclick="showContent('medium_term_receipt')" class="generatePicButton">Medium Term Receipt</button>
+                <button onclick="showContent('long_term_receipt')" class="generatePicButton">Long Term Receipt</button>
+            </div>
+        </center>
+    </div>
+
+    <div style="width: 100%; height: auto" class="receiptContainerWrapper">
+        <center>
+            {{ receiptContainer(user_display_name, short_term['items'], 'short_term_receipt', 'LAST MONTH') }}
+            {{ receiptContainer(user_display_name, medium_term['items'], 'medium_term_receipt', 'LAST 6 MONTHS') }}
+            {{ receiptContainer(user_display_name, long_term['items'], 'long_term_receipt', 'ALL TIME') }}
+        </center>
+    </div>
+
+    <center>
+        <button class="generatePicButton" id="downloadPicButton">Download</button>
+    </center>
+    
+</body>
+</html>
