@@ -108,6 +108,5 @@ def receipt():
         os.remove(".cache")
     return render_template("receipt.html", user_display_name = current_user_name, short_term=short_term, medium_term=medium_term, long_term=long_term, currentTime=gmtime())
 
-
 if __name__ == "__main__":
     app.run(debug = True)
